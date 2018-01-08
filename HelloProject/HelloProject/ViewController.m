@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UILabel* lbl_hello = [[UILabel alloc] init];
+    lbl_hello.frame = self.view.bounds;
+    lbl_hello.text = @"hello world.";
+    
+    [self.view addSubview:lbl_hello];
 }
 
 
