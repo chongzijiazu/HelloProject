@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27EF7A954DA1D9BC804DBBA3 /* libPods-HelloProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411DA7B3D8AED4F6893B4CAB /* libPods-HelloProject.a */; };
 		E62871052003702100914D5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E62871042003702100914D5C /* AppDelegate.m */; };
 		E62871082003702100914D5C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62871072003702100914D5C /* ViewController.m */; };
 		E628710B2003702100914D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62871092003702100914D5C /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AD2D748DCA490179F836EE3 /* Pods-HelloProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloProject/Pods-HelloProject.debug.xcconfig"; sourceTree = "<group>"; };
+		3BCAE94FACBABBFAB5B31CEF /* Pods-HelloProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloProject/Pods-HelloProject.release.xcconfig"; sourceTree = "<group>"; };
+		411DA7B3D8AED4F6893B4CAB /* libPods-HelloProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E62871002003702100914D5C /* HelloProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E62871032003702100914D5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E62871042003702100914D5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EF7A954DA1D9BC804DBBA3 /* libPods-HelloProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33DE362DCA3F99405A93B1BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				411DA7B3D8AED4F6893B4CAB /* libPods-HelloProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		773347AB2795B6ED2CE9CBE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AD2D748DCA490179F836EE3 /* Pods-HelloProject.debug.xcconfig */,
+				3BCAE94FACBABBFAB5B31CEF /* Pods-HelloProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E62870F72003702100914D5C = {
 			isa = PBXGroup;
 			children = (
 				E62871022003702100914D5C /* HelloProject */,
 				E62871012003702100914D5C /* Products */,
+				773347AB2795B6ED2CE9CBE7 /* Pods */,
+				33DE362DCA3F99405A93B1BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E62871162003702100914D5C /* Build configuration list for PBXNativeTarget "HelloProject" */;
 			buildPhases = (
+				1FCFACA20B8F62315BB3AA98 /* [CP] Check Pods Manifest.lock */,
 				E62870FC2003702100914D5C /* Sources */,
 				E62870FD2003702100914D5C /* Frameworks */,
 				E62870FE2003702100914D5C /* Resources */,
+				8E3D605B2702F63F13B59D3B /* [CP] Embed Pods Frameworks */,
+				894CA0135149F00BF987D650 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FCFACA20B8F62315BB3AA98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		894CA0135149F00BF987D650 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloProject/Pods-HelloProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E3D605B2702F63F13B59D3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloProject/Pods-HelloProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E62870FC2003702100914D5C /* Sources */ = {
@@ -218,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -276,6 +351,7 @@
 		};
 		E62871172003702100914D5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AD2D748DCA490179F836EE3 /* Pods-HelloProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +366,7 @@
 		};
 		E62871182003702100914D5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BCAE94FACBABBFAB5B31CEF /* Pods-HelloProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
